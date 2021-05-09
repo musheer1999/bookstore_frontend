@@ -31,6 +31,7 @@ export default function footer() {
               <div className="flexbox-container-1" style={{ display: "flex", flexWrap: "wrap" }}>
                   <div className="flexbox-items flexbox-items-1">
                     <img className="footer-logo" src={logo} alt="logo" />
+                    <h3>IQRA</h3>
             <div className="footer-icons-div">
               <p className="contact-us-footer">
                 <b>Connect with Us</b>

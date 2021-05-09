@@ -4,7 +4,7 @@ import { Container} from "reactstrap";
 import "./paymentDetails.css";
 import axios from "axios";
 import C from "../resource/values";
-
+import Pay from "./razorpay"
 class paymentDetails extends Component {
   constructor() {
     super();
@@ -106,7 +106,7 @@ class paymentDetails extends Component {
               <p className="payment-summaryp">
                 Total Amount:₹
                 <b>
-                  {this.props.history.location.state.subTotal +
+                  {  this.props.history.location.state.subTotal+
                     this.state.shipping}
                 </b>
               </p>
@@ -120,6 +120,7 @@ class paymentDetails extends Component {
                   >
                     Place Order
                   </button>
+                  <Pay value={(this.props.history.location.state.subTotal +this.state.shipping)*100 } tran={ this.props.history } state={this.state}></Pay>
                   {/* </Link> */}
                 </>
               ) : (

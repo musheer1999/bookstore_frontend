@@ -185,7 +185,9 @@ this.setState({select:event.target.value},()=>{
             <li className="hamburger">
               <img src={Hamburger} className='hambuger-image' />
             </li>
+            
             <li className="home-logo">
+              
               <Link to="/">
                 <img src={logo} alt="logo" />
               </Link>
@@ -252,8 +254,15 @@ this.setState({select:event.target.value},()=>{
        
         </div>
         <div className="sidebar">
+          
           <div className="sidebar-logo" >
-            <div><img src={logo}/></div>
+        
+            <div>
+        
+              <img src={logo}/>
+              <h4>IQRA</h4>
+              </div>
+            
             <div className="close">X</div>
           </div>
          
