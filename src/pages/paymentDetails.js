@@ -56,7 +56,7 @@ class paymentDetails extends Component {
                   checked={this.state.mode === "cod"}
                   onChange={this.selectMode}
                 ></input>
-                <label className="order-radiolabel">COD</label>
+                <label className="order-radiolabel">Online</label>
                 <br />
                 <hr />
                 <input
@@ -67,34 +67,12 @@ class paymentDetails extends Component {
                   onChange={this.selectMode}
                 ></input>
                 <label className="order-radiolabel text-muted">
-                  Debit Card
+                  COD
                 </label>
                 <br />
                 <hr />
-                <input
-                  disabled="true"
-                  type="radio"
-                  name="credit"
-                  checked={this.state.mode === "credit"}
-                  onChange={this.selectMode}
-                ></input>
-                <label className="order-radiolabel text-muted">
-                  Credit Card
-                </label>
-                <br />
-                <hr />
-                <input
-                  disabled="true"
-                  type="radio"
-                  name="net"
-                  checked={this.state.mode === "net"}
-                  onChange={this.selectMode}
-                ></input>
-                <label className="order-radiolabel text-muted">
-                  Net Banking
-                </label>
-
-                <hr />
+              
+               
               </form>
             </div>
             <div className="payment-summary">
@@ -116,11 +94,11 @@ class paymentDetails extends Component {
                   <button
                     style={{ backgroundColor: "#fecc36" }}
                     className="payment-btn btn "
-                    onClick={this.pay}
+                
                   >
-                    Place Order
+                     <Pay value={(this.props.history.location.state.subTotal +this.state.shipping)*100 } tran={ this.props.history } state={this.state}></Pay>
                   </button>
-                  <Pay value={(this.props.history.location.state.subTotal +this.state.shipping)*100 } tran={ this.props.history } state={this.state}></Pay>
+                
                   {/* </Link> */}
                 </>
               ) : (
@@ -129,7 +107,7 @@ class paymentDetails extends Component {
                     className="payment-btn btn "
                     disabled="true"
                   >
-                    Place Order
+                    Select Mode
                   </button>
                 )}
             </div>

@@ -80,7 +80,7 @@ console.log(props)
           target="_blank"
           rel="noopener noreferrer"
         >
-         Paying
+         Proceed to Pay
         </a>
       </header>
     </div>
